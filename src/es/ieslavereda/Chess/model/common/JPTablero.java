@@ -10,6 +10,7 @@ import java.awt.GridLayout;
 import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -125,6 +126,41 @@ public class JPTablero extends JPanel {
 		return label;
 
 		
+	}
+	
+	public boolean check(Color color) {
+		
+		Set l=new HashSet();
+		
+		if(color==Color.BLACK) {
+			
+			for(int i=0;i<blancas.size();i++) 				
+				l.addAll(blancas.get(i).getNextMovements());
+				
+				
+			if(l.contains(blackKing.posicion)==true)		
+				return true;
+			
+			else
+				return false;
+			
+		}else {
+			
+			for(int i=0;i<negras.size();i++) 		
+				l.addAll(negras.get(i).getNextMovements());
+			
+			
+			if(l.contains(whiteKing.posicion)==true)
+				return true;
+			
+			else
+				return false;
+		}
+		
+	}
+
+	public HashMap<Coordenada, Celda> getTablero() {
+		return tablero;
 	}
 	
 	public boolean contiene(Coordenada c) {

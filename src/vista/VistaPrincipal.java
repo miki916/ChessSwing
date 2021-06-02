@@ -30,6 +30,8 @@ public class VistaPrincipal extends JFrame {
 	private JMenuBar menuBar;
 	private JButton btnPreferencias;
 	private JButton btnSalir;
+	private JButton btnExportar;
+	private JButton btnImportar;
 
 	
 		/**
@@ -47,13 +49,13 @@ public class VistaPrincipal extends JFrame {
 		mnFile.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(mnFile);
 		
-		JButton btnExportar = new JButton("Exportar");
+		btnExportar = new JButton("Exportar");
 		mnFile.add(btnExportar);
 		
-		JButton btnImportar = new JButton("Importar");
+		btnImportar = new JButton("Importar");
 		mnFile.add(btnImportar);
 		
-		btnSalir = new JButton("Salir");
+		btnSalir = new JButton("Nuevo");
 		mnFile.add(btnSalir);
 		
 		JMenu mnEdit = new JMenu("Edit");
@@ -102,6 +104,25 @@ public class VistaPrincipal extends JFrame {
 	    g2.dispose();
 
 	    return resizedImg;
+	}
+	
+	
+
+
+	public JButton getBtnPreferencias() {
+		return btnPreferencias;
+	}
+
+	public JButton getBtnSalir() {
+		return btnSalir;
+	}
+
+	public JButton getBtnExportar() {
+		return btnExportar;
+	}
+
+	public JButton getBtnImportar() {
+		return btnImportar;
 	}
 
 	public JPMovimientos getPanelMovimientos() {

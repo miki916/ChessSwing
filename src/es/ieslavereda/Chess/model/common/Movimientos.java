@@ -71,7 +71,14 @@ public class Movimientos implements Serializable {
 	public Pieza getFichaGenerada() {
 		return fichaGenerada;
 	}
+	
+	public Pieza getFichaPeon() {
+		return fichaPeon;
+	}
 
+	public void setFichaPeon(Pieza fichaPeon) {
+		this.fichaPeon = fichaPeon;
+	}
 	
 	public void setFichaGenerada(Pieza fichaGenerada) {
 		this.fichaGenerada = fichaGenerada;

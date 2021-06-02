@@ -16,6 +16,26 @@ public abstract class Pieza {
 		
 	}
 	
+	
+	
+	public void setTipo(Tipo tipo) {
+		this.tipo = tipo;
+	}
+
+
+
+	public void setTablero(JPTablero tablero) {
+		this.tablero = tablero;
+	}
+
+
+
+	public void setPosicion(Coordenada posicion) {
+		this.posicion = posicion;
+	}
+
+
+
 	protected void colocate(Coordenada c) {
 		
 		tablero.getCeldaAt(posicion).setPieza(null);

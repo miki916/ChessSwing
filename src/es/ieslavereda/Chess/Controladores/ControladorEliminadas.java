@@ -81,13 +81,27 @@ public class ControladorEliminadas implements GestionPiezasEliminadas, ActionLis
 	public void eliminarPieza(Pieza ficha) {
 		// TODO Auto-generated method stub
 		
+		JLabel label = fichasEliminadas.get(ficha);
+		
+		if(ficha.getColor()==Color.WHITE) {			
+			panelEliminadas.getPanelBlancas().remove(label);	
+			panelEliminadas.getPanelBlancas().repaint();
+		}else {
+			panelEliminadas.getPanelNegras().remove(label);
+			panelEliminadas.getPanelNegras().repaint();
+		}
+		
+		
 	}
+
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 	
 	
 	

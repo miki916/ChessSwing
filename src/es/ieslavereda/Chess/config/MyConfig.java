@@ -47,10 +47,28 @@ public class MyConfig {
 	public int getWhiteCellColor() {
 		return Integer.parseInt(properties.getProperty("color_celda_blanca"));
 	}
+	
+	public void setBlackCellColor(Color color) {
+		properties.setProperty("color_celda_negra", String.valueOf(color.getRGB()));
+		guardar();
+	}
+	
+	
 	public void setWhiteCellColor(Color color) {
 		properties.setProperty("color_celda_blanca", String.valueOf(color.getRGB()));
 		guardar();
 	}
+
+	public void setBorderCell(Color color) {
+		properties.setProperty("color_borde_celda_normal", String.valueOf(color.getRGB()));
+		guardar();
+	}
+	
+	public void setBorderCellKill(Color color) {
+		properties.setProperty("color_borde_celda_comer", String.valueOf(color.getRGB()));
+		guardar();
+	}
+	
 	
 	public int getBlackCellColor() {
 		return Integer.parseInt(properties.getProperty("color_celda_negra"));
